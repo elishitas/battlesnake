@@ -164,10 +164,10 @@ func main() {
 		port = "8080"
 	}
 
-	http.HandleFunc("/", withServerID(HandleIndex))
-	http.HandleFunc("/start", withServerID(HandleStart))
-	http.HandleFunc("/move", withServerID(HandleMove))
-	http.HandleFunc("/end", withServerID(HandleEnd))
+	http.HandleFunc("/", HandleIndex)
+	http.HandleFunc("/start", HandleStart)
+	http.HandleFunc("/move", HandleMove)
+	http.HandleFunc("/end", HandleEnd)
 
 	log.Printf("Starting Battlesnake Server at http://0.0.0.0:%s...\n", port)
 	log.Fatal(http.ListenAndServe(":"+port, nil))
