@@ -157,6 +157,7 @@ func withServerID(next http.HandlerFunc) http.HandlerFunc {
 }
 
 // Main Entrypoint
+//https://elishitas.battlesnake.com/ info
 
 func main() {
 	port := os.Getenv("PORT")
